@@ -1,0 +1,16 @@
+digraph New {
+	fontname = "Times-Roman"; fontsize = 14;
+	node [ height = 0.25, width = 0.4, shape = box ];
+	edge [ color = red ];
+	nodesep = 0.1; ranksep = 0.5;
+
+	nodep0 [color = chocolate shape = ellipse, label = " p0 : variable := "];
+	nodep1 [color = chocolate shape = ellipse, label = " p1 : variable := "];
+
+	nodet0 [color = blue shape = record, label = "{ t0 | expression := y=x+1 }"];
+
+	nodep0 -> nodet0 [label = " "];
+	nodet0 -> nodep1 [label = " "];
+	nodestart [color = black shape = ellipse, label = "Initial Mark"];
+	nodestart -> nodep0 [color = black label = " "];
+}

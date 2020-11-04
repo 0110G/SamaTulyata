@@ -1,0 +1,52 @@
+
+SCPEQX (Static cut-point induced path based equivalence checker)
+Soumyadip Bandyopadhyay
+Jan 21, 2015
+
+
+Pre-requisites:
+1. gcc 4.7.2
+2. flex 2.5.35
+3. bison 2.5
+4. 
+
+Please execute the following commands to install and run SCPEQX.
+Conditional compilation is available.  
+
+/***********************************************************************/
+
+
+
+make                     <-- This will install SCPEQX  
+                         (Static cut-point induced equivalence checker).
+
+		
+
+./pres file1 file2  <-- To run SCPEQX.
+
+/***********************************************************************/
+
+
+
+Some benchmarks are provided in the folder "Benchmarks".
+
+Run some examples:
+
+make
+
+.\test.sh
+
+One can modify the test.sh file
+
+After modifiction
+
+chmod +x text.sh
+
+Run .\test.sh
+/***********************************************************************/
+
+For more information (and on discovery of bugs), please contact:
+soumyadipb@cse.iitkgp.ernet.in, soumyadipb@goa.bits-pilani.ac.in
+Ph No: +91 8900270263
+SkypeId: soumyadip12
+
