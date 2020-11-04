@@ -1,0 +1,23 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+DecompilingEXPRNode	printmodel.cxx	/^ void  DecompilingEXPRNode(EXPR expr)$/;"	f
+DecompilingEXPRNodefile	writepres.cxx	/^ void  DecompilingEXPRNodefile(FILE *fp, EXPR expr)$/;"	f
+DecompilingExpr	printmodel.cxx	/^void DecompilingExpr(EXPR expr)$/;"	f
+DecompilingExprfile	writepres.cxx	/^void DecompilingExprfile(FILE *fp,EXPR expr)$/;"	f
+drivemenue	drivemenu.cxx	/^int drivemenue()$/;"	f
+fsmd	translation.cxx	/^FSMD fsmd;$/;"	v
+main	main.cxx	/^int main(){$/;"	f
+printpresplus	printmodel.cxx	/^int printpresplus(PRESPLUS model)$/;"	f
+readFile	readFile.cxx	/^PRESPLUS readFile ()$/;"	f
+readInitialMarking	readUtility.cxx	/^PRESPLUS readInitialMarking(PRESPLUS model)$/;"	f
+readKBDF	readKBDF.cxx	/^PRESPLUS readKBDF()$/;"	f
+readplace	readUtility.cxx	/^PRESPLUS readplace (PRESPLUS model)$/;"	f
+readtransition	readUtility.cxx	/^PRESPLUS readtransition(PRESPLUS model)$/;"	f
+searchForPlace	searUtility.cxx	/^int searchForPlace(PRESPLUS model, char* name)$/;"	f
+searchForTransition	searUtility.cxx	/^int searchForTransition(PRESPLUS model, char* name)$/;"	f
+searchForVariable	searUtility.cxx	/^int searchForVariable(PRESPLUS model, char name)$/;"	f
+writeFile	writepres.cxx	/^int writeFile (PRESPLUS model)$/;"	f

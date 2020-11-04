@@ -1,0 +1,219 @@
+
+%{
+
+/* System Includes */
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+/* Project Includes */
+#include "types.h"
+#include "Utility.h"
+
+/* External function declaration */
+extern int yylex (void);
+extern void string_scan(char*) ;
+void yyerror (char const *);
+
+/* Internal Function Declarationi */
+EXPR CreateCharactor(char );
+EXPR CreateConstant(int) ;
+EXPR CreateBinary(EXPR, char*, EXPR) ;
+EXPR CreateUnary(char*, EXPR );
+
+EXPR finalExpr ;
+
+%}
+
+/* Type for expression nodes */
+%union {
+    char     literal  ;
+    int      constant ;
+    char*    operetor ;
+    EXPR  PresPlusExpr;
+}
+
+%type <PresPlusExpr> exp
+%type <PresPlusExpr> input
+
+%token <literal> CHAR 
+%token <constant> NUM
+%token <operetor> EQ
+%token <operetor> GRETEREQ
+%token <operetor> LESSEQ
+%token <operetor> GRETER
+%token <operetor> LESS
+%token <operetor> EQEQ
+%token <operetor> AND
+%token <operetor> OR
+%token <operetor> PLUS
+%token <operetor> MINUS
+%token <operetor> MULT
+%token <operetor> DIV
+%token <operetor> NOTEQ
+%token <operetor> UNDER
+%left MINUS PLUS
+%left MULT DIV
+%left EQEQ NOTEQ
+%left GRETER GRETEREQ
+%left LESS LESSEQ
+%left AND OR
+%left EQ
+%left UNDER
+%start input 
+
+%%
+
+input : exp { finalExpr = $1 ; }
+
+exp:     CHAR { $$ = CreateCharactor($1); }
+        | NUM { $$ = CreateConstant($1) ; }
+        | exp PLUS exp        
+          { $$ = CreateBinary($1,$2,$3); }
+        | exp MINUS exp        
+          { $$ = CreateBinary($1,$2,$3); }
+        | exp MULT exp         
+          { $$ = CreateBinary($1,$2,$3); }
+        | exp DIV exp  
+          { $$ = CreateBinary($1,$2,$3); }
+        | exp EQEQ exp
+          { $$ = CreateBinary($1,$2,$3); }
+        | exp NOTEQ exp
+          { $$ = CreateBinary($1,$2,$3); }
+        | exp GRETER exp
+          { $$ = CreateBinary($1,$2,$3); }
+        | exp GRETEREQ exp
+          { $$ = CreateBinary($1,$2,$3); }
+        | exp  LESS exp
+          { $$ = CreateBinary($1,$2,$3); }
+        | exp LESSEQ  exp
+          { $$ = CreateBinary($1,$2,$3); }
+        | exp AND exp
+          { $$ = CreateBinary($1,$2,$3); }
+        | exp OR  exp
+          { $$ = CreateBinary($1,$2,$3); }
+        | exp EQ exp      
+          { $$ = CreateBinary($1,$2,$3); }
+        | exp UNDER exp
+          { $$ = CreateBinary($1,$2,$3); }
+//        | NEG exp
+//          { $$ = CreateUnary($1,$2); }
+;
+%%
+
+EXPR ParseExpression(char* exprString)
+{
+        finalExpr = NULL ;
+        //yydebug=1;
+	string_scan(exprString) ;
+	yyparse() ;
+	return finalExpr ;
+}
+
+void yyerror(char const *s)
+{
+	fprintf(stderr, "%s\n",s);
+}
+
+EXPR CreateCharactor(char c)
+{
+	EXPR tmp = (EXPRNODE*)malloc(sizeof(EXPRNODE)) ;
+	tmp->type = 1 ;
+	tmp->value = c ;
+	tmp->left = NULL ;
+	tmp->right = NULL ;
+
+	return tmp ;
+}
+
+EXPR CreateConstant(int constant)
+{
+	EXPR tmp = (EXPRNODE*)malloc(sizeof(EXPRNODE)) ;
+	tmp->type = 2;
+    tmp->value = constant;
+    tmp->left = NULL;
+    tmp->right = NULL;
+    return tmp ;
+}
+
+EXPR CreateBinary(EXPR left, char* op, EXPR right)
+{
+	EXPRNODE* tmp = (EXPRNODE*)malloc(sizeof(EXPRNODE)) ;
+	tmp->left = left ;
+	tmp->right = right;
+	tmp->type = 0 ;
+    if(strcmp(op,"+") == 0)
+	{
+		tmp->value = 9 ; return tmp ; 
+	}
+    else if(strcmp(op,"-")==0)
+	{
+		tmp->value = 10 ; return tmp;
+	}
+    else if(strcmp(op,"*") == 0)
+	{
+		tmp->value = 11 ; return tmp;
+	}
+    else if(strcmp(op,"/") == 0)
+	{
+		tmp->value = 12 ; return tmp;
+	}
+    else if(strcmp(op,"==") == 0)
+	{
+		tmp->value = 0 ; return tmp;
+	} 
+    else if(strcmp(op,">=") == 0)
+	{
+		tmp->value = 5 ; return tmp;
+	} 
+    else if(strcmp(op,"<=") == 0)
+	{
+		tmp->value = 6 ; return tmp;
+	} 
+	else if(strcmp(op,"<") == 0)
+	{
+		tmp->value = 3 ; return tmp;
+	} 
+	else if(strcmp(op,">") == 0)
+	{
+		tmp->value = 2 ; return tmp;
+	} 
+	else if(strcmp(op,"=") == 0)
+	{
+		tmp->value = 7 ; return tmp;
+	} 
+	else if(strcmp(op,"!=") == 0)
+	{
+		tmp->value = 8 ; return tmp;
+	} 
+    else if(strcmp(op,"&") == 0)
+	{
+		tmp->value = 1 ; return tmp;
+	}
+ 	else if(strcmp(op,"|") == 0)
+	{
+		tmp->value = 4 ; return tmp;
+	}  
+        	
+        else if (strcmp(op,"_") == 0)
+        {
+                tmp->value = 13 ; return tmp;
+        }
+
+        return tmp ;
+}
+/*
+EXPR CreateUnary(char* op, EXPR expr) 
+{
+
+       exprNode* tmp =(exprNode*) malloc(sizeof(exprnode));
+       tmp->left = left;
+       tmp->right = NULL;
+       tmp->type = 0;
+       switch (op)
+       {
+                case 'NEG' : { tmp->value = 2 ; return tmp;}
+                
+       }	
+       return tmp;
+
+}*/
