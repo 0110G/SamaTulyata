@@ -1,0 +1,141 @@
+%%
+
+
+findcutpoints() is bigen ...............
+
+The cutpoint list is:-
+p1(type=1)	p2(type=1)	p3(type=1)	p4(type=2)	p5(type=2)	p6(type=2)	p7(type=2)	p8(type=2)	p9(type=2)	p10(type=2)	p11(type=2)	p16(type=0)	
+
+path 0 : <  { t1  }  >
+
+path 1 : <  { t2  }  >
+
+path 2 : <  { t3  }  >
+
+path 3 : <  { t4  }  { t6  }  { t10  }  >
+
+path 4 : <  { t4  }  { t7  }  { t11  }  { t13  }  >
+
+path 5 : <  { t4  }  { t7  }  { t11  }  { t13  }  { t14  }  >
+
+path 6 : <  { t5  }  { t8  }  >
+
+
+findcutpoints() is bigen ...............
+
+The cutpoint list is:-
+p1(type=1)	p2(type=1)	p3(type=1)	p4(type=2)	p5(type=2)	p6(type=2)	p7(type=2)	p8(type=2)	p9(type=2)	p10(type=2)	p12(type=0)	
+
+path 0 : <  { t1  }  >
+
+path 1 : <  { t2  }  >
+
+path 2 : <  { t3  }  >
+
+path 3 : <  { t5  }  >
+
+path 4 : <  { t4  }  { t7  }  >
+
+path 5 : <  { t4  }  { t7  }  { t9  }  >
+
+path 6 : <  { t4  }  { t7  }  { t9  }  { t10  }  >
+
+Invalid:Invalid:Invalid:Invalid:
+##################### PATH  EQUIVALANCE #######################
+
+PATH 1 IS CHECKING...............
+
+PATH 1 OF MODEL 1 IS MATCHED WITH PATH 4 OF MODEL 2
+
+
+THE CONDITION IS
+
+THE TRANSFORMATION IS
+
+ i :=  2 
+PATH 2 IS CHECKING...............
+
+PATH 2 OF MODEL 1 IS MATCHED WITH PATH 4 OF MODEL 2
+
+
+THE CONDITION IS
+
+THE TRANSFORMATION IS
+
+ n :=  0 + 1 * id 
+PATH 3 IS CHECKING...............
+
+PATH 3 OF MODEL 1 IS MATCHED WITH PATH 4 OF MODEL 2
+
+
+THE CONDITION IS
+
+THE TRANSFORMATION IS
+
+ a :=  0 + 1 * id 
+PATH 4 IS CHECKING...............
+
+PATH 4 OF MODEL 1 IS MATCHED WITH PATH 4 OF MODEL 2
+
+
+THE CONDITION IS
+ (  0 + 1 * i - 1 * n < 0 )  AND  (  -1 + 1 * k == 0 ) 
+THE TRANSFORMATION IS
+
+ k :=  0 + 1 M 0	 0 + 1 * n ,  0 + 1 * i 
+ sum :=  0 + 1 * i + 1 * sum 
+ l :=  0 + 1 * k 
+PATH 5 IS CHECKING...............
+
+PATH 5 OF MODEL 1 IS MATCHED WITH PATH 4 OF MODEL 2
+
+
+THE CONDITION IS
+ (  0 + 1 * i - 1 * n < 0 )  AND  (  -1 + 1 * k != 0 ) 
+THE TRANSFORMATION IS
+
+ i :=  0 + 1 * i 
+ k :=  0 + 1 M 0	 0 + 1 * n ,  0 + 1 * i 
+ m :=  0 + 1 * k 
+PATH 6 IS CHECKING...............
+
+PATH 6 OF MODEL 1 IS MATCHED WITH PATH 4 OF MODEL 2
+
+
+THE CONDITION IS
+ (  0 + 1 * i - 1 * n < 0 )  AND  (  -1 + 1 * k != 0 ) 
+THE TRANSFORMATION IS
+
+ i :=  0 + 1 * i 
+ n :=  0 + 1 * n 
+ k :=  0 + 1 M 0	 0 + 1 * n ,  0 + 1 * i 
+ m :=  0 + 1 * k 
+PATH 7 IS CHECKING...............
+
+PATH 7 OF MODEL 1 IS MATCHED WITH PATH 5 OF MODEL 2
+
+
+THE CONDITION IS
+ (  0 + 1 * i - 1 * n >= 0 )  AND  (  0 - 1 * n + 1 * sum == 0 ) 
+THE TRANSFORMATION IS
+
+ n :=  0 + 1 * n 
+ out :=  1 
+
+
+<<<<<<<<<<<<<<<<< THE TWO MODEL ARE EQUIVALENT >>>>>>>>>>>>>>>>>
+
+
+
+
+
+###################### Verification Report ##############################
+
+
+ No. of places in N0: 19 and No. of places in N1: 14
+
+ No. of paths in initial path cover of M0: 7 and No. of paths in actual path cover of M0: 7
+
+ Exec time is 0 sec and 10576 microsecs
+
+##########################################################################

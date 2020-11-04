@@ -1,0 +1,78 @@
+
+
+
+findcutpoints() is bigen ...............
+
+The cutpoint list is:-
+p1(type=1)	p2(type=2)	p4(type=0)	
+
+path 0 : <  { t1  }  >
+
+path 1 : <  { t3  }  >
+
+path 2 : <  { t2  }  { t4  }  { t5  }  >
+
+
+findcutpoints() is bigen ...............
+
+The cutpoint list is:-
+p1(type=1)	p2(type=2)	p4(type=0)	
+
+path 0 : <  { t1  }  >
+
+path 1 : <  { t3  }  >
+
+path 2 : <  { t2  }  { t4  }  >
+
+
+##################### PATH  EQUIVALANCE #######################
+
+PATH 1 IS CHECKING...............
+
+PATH 1 OF MODEL 1 IS MATCHED WITH PATH 3 OF MODEL 2
+
+
+THE CONDITION IS
+ (  -9 + 1 * n > 0 ) 
+THE TRANSFORMATION IS
+
+ a :=  0 + 1 * b 
+PATH 2 IS CHECKING...............
+
+PATH 2 OF MODEL 1 IS MATCHED WITH PATH 1 OF MODEL 2
+
+
+THE CONDITION IS
+
+THE TRANSFORMATION IS
+
+ k :=  0 
+PATH 3 IS CHECKING...............
+
+PATH 3 OF MODEL 1 IS MATCHED WITH PATH 1 OF MODEL 2
+
+
+THE CONDITION IS
+ (  -9 + 1 * n <= 0 ) 
+THE TRANSFORMATION IS
+
+ k :=  0 + 1 * id 
+ n :=  0 + 1 * id 
+
+
+<<<<<<<<<<<<<<<<< THE TWO MODEL ARE EQUIVALENT >>>>>>>>>>>>>>>>>
+
+
+
+
+
+###################### Verification Report ##############################
+
+
+ No. of places in N0: 5 and No. of places in N1: 4
+
+ No. of paths in initial path cover of M0: 3 and No. of paths in actual path cover of M0: 3
+
+ Exec time is 0 sec and 5094 microsecs
+
+##########################################################################

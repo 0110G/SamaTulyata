@@ -1,0 +1,27 @@
+digraph s1 {
+	fontname = "Times-Roman"; fontsize = 14;
+	node [ height = 0.25, width = 0.4, shape = box ];
+	edge [ color = red ];
+	nodesep = 0.1; ranksep = 0.5;
+
+	nodep1 [color = chocolate shape = ellipse, label = " p1 : variable := y"];
+	nodep2 [color = chocolate shape = ellipse, label = " p2 : variable := k"];
+	nodep3 [color = chocolate shape = ellipse, label = " p3 : variable := x"];
+	nodep4 [color = chocolate shape = ellipse, label = " p4 : variable := i"];
+	nodep5 [color = chocolate shape = ellipse, label = " p5 : variable := z"];
+
+	nodet1 [color = blue shape = record, label = "{ t1 | expression := i=k }"];
+	nodet2 [color = blue shape = record, label = "{ t2 | expression := i=i+1 | condition := i\<10 }"];
+	nodet3 [color = blue shape = record, label = "{ t3 | expression := z=x | condition := i\>10 }"];
+
+	nodep2 -> nodet1 [label = " "];
+	nodet1 -> nodep4 [label = " "];
+	nodep4 -> nodet2 [label = " "];
+	nodet2 -> nodep4 [label = " "];
+	nodep3 -> nodet3 [label = " "];
+	nodep4 -> nodet3 [label = " "];
+	nodet3 -> nodep5 [label = " "];
+	nodestart [color = black shape = ellipse, label = "Initial Mark"];
+	nodestart -> nodep2 [color = black label = " "];
+	nodestart -> nodep3 [color = black label = " "];
+}

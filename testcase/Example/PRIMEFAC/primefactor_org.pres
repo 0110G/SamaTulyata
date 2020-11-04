@@ -1,0 +1,122 @@
+
+ Number of Places = 12
+ Place : p1 
+ Associated variable : n
+
+
+ Place : p2 
+ Associated variable : x
+
+
+ Place : p3 
+ Associated variable : n
+
+
+ Place : p4 
+ Associated variable : n
+
+
+ Place : p5 
+ Associated variable : x
+
+
+ Place : p6 
+ Associated variable : temp
+
+
+ Place : p7 
+ Associated variable : temp
+
+
+ Place : p8 
+ Associated variable : x
+
+
+ Place : p9 
+ Associated variable : k
+ 
+ Place : p10 
+ Associated variable : k
+
+
+ Place : p11
+ Associated variable : m
+ 
+ Place : p12
+ Associated variable : out
+
+
+ Number of Transitions = 10
+ Transition : t1
+ Transition function :n=n
+ Guard conditions :n_g
+ Printing Preset list(1) :p1 
+ Printing Postset list(2) : p3 p4 
+
+
+ Transition : t2
+ Transition function :x=x
+ Guard conditions :n_g
+ Printing Preset list(1) :p2 
+ Printing Postset list(1) : p5 
+
+
+ Transition : t3
+ Transition function :temp=n
+ Guard conditions :n_g
+ Printing Preset list(1) :p3  
+ Printing Postset list(2) :p6 p7 
+
+
+ Transition : t4
+ Transition function :x=n
+ Guard conditions :n_g
+ Printing Preset list(2) :p4 p5 
+ Printing Postset list(2) :p8 p5 
+
+
+ Transition : t5
+ Transition function :k=2
+ Guard conditions :temp>1
+ Printing Preset list(1) :p6 
+ Printing Postset list(2) :p9 p10 
+
+
+ Transition : t6
+ Transition function :temp=x/k
+ Guard conditions :n_g
+ Printing Preset list(2) :p10 p8 
+ Printing Postset list(2) :p6 p7
+
+
+ Transition : t7
+ Transition function :c+2
+ Guard conditions :k<=x
+ Printing Preset list(2) :p10 p8 
+ Printing Postset list(1) : p11 
+
+
+ Transition : t8
+ Transition function :k=k+1
+ Guard conditions :m!=0
+ Printing Preset list(2) :p11 p9 
+ Printing Postset list(2) : p9 p10
+
+
+ Transition : t9
+ Transition function :out=k
+ Guard conditions :n_g
+ Printing Preset list(2) :p11 p9 
+ Printing Postset list(1) :p12
+
+
+ Transition : t10
+ Transition function :x=temp
+ Guard conditions :n_g
+ Printing Preset list(2) :p11 p7 
+ Printing Postset list(1) :p5
+
+ Printing initial marking ... 
+ Total number of initially marked places : 2
+ Initially marked places are : p1 p2 
+

@@ -1,0 +1,18 @@
+digraph patter {
+	fontname = "Times-Roman"; fontsize = 14;
+	node [ height = 0.25, width = 0.4, shape = box ];
+	edge [ color = red ];
+	nodesep = 0.1; ranksep = 0.5;
+
+	nodep0 [color = chocolate shape = ellipse, label = " p0 : variable := a"];
+	nodep1 [color = chocolate shape = ellipse, label = " p1 : variable := b"];
+	nodep2 [color = chocolate shape = ellipse, label = " p2 : variable := b"];
+	nodep4 [color = chocolate shape = ellipse, label = " p4 : variable := d"];
+	nodep5 [color = chocolate shape = ellipse, label = " p5 : variable := c"];
+	nodep6 [color = chocolate shape = ellipse, label = " p6 : variable := e"];
+	nodep7 [color = chocolate shape = ellipse, label = " p7 : variable := f"];
+	nodep9 [color = chocolate shape = ellipse, label = " p9 : variable := h"];
+
+
+	nodestart [color = black shape = ellipse, label = "Initial Mark"];
+}

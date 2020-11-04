@@ -1,0 +1,144 @@
+
+ Number of Places = 14
+ 
+ Place : p1 
+ Associated variable : i
+ 
+
+
+ Place : p2 
+ Associated variable : n
+ 
+
+
+ Place : p3 
+ Associated variable : sum
+
+
+
+ Place : p4 
+ Associated variable : i
+
+
+
+ Place : p5 
+ Associated variable : i
+ 
+
+
+ Place : p6 
+ Associated variable : i
+
+
+
+ Place : p7 
+ Associated variable : n
+
+
+
+ Place : p8 
+ Associated variable : n
+  
+
+
+ Place : p9 
+ Associated variable : sum
+ 
+
+
+ Place : p10
+ Associated variable : k
+ 
+
+
+ Place : p11 
+ Associated variable : n
+
+
+
+ Place : p12
+ Associated variable : l
+
+
+
+ Place : p13
+ Associated variable : m
+ 
+
+
+ Place : p14
+ Associated variable : m
+ 
+
+ Number of Transitions = 10
+ Transition : t1
+ Transition function :i=2
+ Guard conditions :n_g
+ Printing Preset list(1) :p1 
+ Printing Postset list(3) :p4 p5 p6  
+
+
+ Transition : t2
+ Transition function :n=id
+ Guard conditions :n_g
+ Printing Preset list(1) :p2 
+ Printing Postset list(2) :p7 p8  
+
+
+ Transition : t3
+ Transition function :a=id
+ Guard conditions :n_g
+ Printing Preset list(1) :p3 
+ Printing Postset list(2) :p9 p10  
+
+ Transition : t4
+ Transition function :k=n%i
+ Guard conditions :i<n
+ Printing Preset list(2) :p5 p7 
+ Printing Postset list(1) :p11
+
+
+ Transition : t5
+ Transition function :out=1
+ Guard conditions :i>=n&&sum==n
+ Printing Preset list(3) :p5 p7 p9
+ Printing Postset list(1) :p12 
+
+ Transition : t6
+ Transition function :sum=0
+ Guard conditions :i>=n&&sum!=n
+ Printing Preset list(3) :p5 p7 p9
+ Printing Postset list(1) :p12
+
+ Transition : t7
+ Transition function :sum=sum+i
+ Guard conditions :k==1
+ Printing Preset list(3) :p4 p10 p11
+ Printing Postset list(3) :p9 p10 p13
+
+
+ Transition : t8
+ Transition function :i=i+1
+ Guard conditions :k!=1
+ Printing Preset list(2) :p11 p4
+ Printing Postset list(1) :p14 
+
+
+ Transition : t9
+ Transition function :i=i+1
+ Guard conditions :n_g
+ Printing Preset list(2) :p13 p6
+ Printing Postset list(4) :p4 p5 p6 p14
+
+
+ Transition : t10
+ Transition function :n=n
+ Guard conditions :n_g
+ Printing Preset list(2) :p14 p8 
+ Printing Postset list(2) : p7 p8 
+
+
+ Printing initial marking ... 
+ Total number of initially marked places : 3
+ Initially marked places are : p1 p2 p3 
+

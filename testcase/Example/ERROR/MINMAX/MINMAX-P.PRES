@@ -1,0 +1,102 @@
+
+ Number of Places = 9
+ Place : p0 
+ Associated variable : s
+
+
+ Place : p1 
+ Associated variable : a
+
+
+ Place : p2 
+ Associated variable : b
+
+
+ Place : p4 
+ Associated variable : e
+
+
+ Place : p5 
+ Associated variable : b
+
+
+ Place : p7 
+ Associated variable : f
+
+
+ Place : p8 
+ Associated variable : g
+
+
+ Place : p9 
+ Associated variable : h
+
+
+ Place : p10 
+ Associated variable : i
+
+
+
+
+
+ Number of Transitions = 8
+ Transition : t01
+ Transition function :a=s
+ Guard conditions :n_g
+ Printing Preset list(1) :p0 
+ Printing Postset list(1) : p1 
+
+
+ Transition : t125
+ Transition function :b=a+1
+ Guard conditions :n_g
+ Printing Preset list(1) :p1 
+ Printing Postset list(1) : p2 p5 
+
+
+ Transition : t23
+ Transition function :e=4*b
+ Guard conditions :n_g
+ Printing Preset list(1) :p2
+ Printing Postset list(1) : p4 
+
+
+ Transition : t56
+ Transition function :d=b+2
+ Guard conditions :n_g
+ Printing Preset list(1) :p5 
+ Printing Postset list(1) : p7
+
+
+ Transition : t478
+ Transition function :g=f+e
+ Guard conditions :n_g
+ Printing Preset list(1) :p4 p7 
+ Printing Postset list(1) : p8
+
+
+ Transition : t89
+ Transition function :h=g
+ Guard conditions :g<=10
+ Printing Preset list(1) :p8 
+ Printing Postset list(1) : p9 
+
+
+ Transition : t91
+ Transition function :a=h
+ Guard conditions :n_g
+ Printing Preset list(1) :p9 
+ Printing Postset list(1) : p1 
+
+
+ Transition : t810
+ Transition function :i=g
+ Guard conditions :n_g
+ Printing Preset list(1) :p8 
+ Printing Postset list(1) : p10 
+
+
+ Printing initial marking ... 
+ Total number of initially marked places : 1
+ Initially marked places are : p0
+

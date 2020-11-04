@@ -1,0 +1,342 @@
+
+ Number of Places = 31
+ 
+ Place : p1 
+ Associated variable : res
+ 
+
+
+ Place : p2 
+ Associated variable : y1
+ 
+
+
+ Place : p3 
+ Associated variable : y2
+
+
+
+ Place : p4 
+ Associated variable : i
+
+
+
+ Place : p5 
+ Associated variable : res
+ 
+
+
+ Place : p6 
+ Associated variable : res
+
+
+
+ Place : p7 
+ Associated variable : y1
+
+
+
+ Place : p8 
+ Associated variable : y1
+  
+ 
+ 
+ Place : p9
+ Associated variable : y1
+ 
+
+
+ Place : p10
+ Associated variable : y2
+ 
+
+
+ Place : p11 
+ Associated variable : y2
+
+
+
+ Place : p12
+ Associated variable : y2
+
+
+
+ Place : p13
+ Associated variable : i
+ 
+
+
+ Place : p14
+ Associated variable : k
+
+
+
+ Place : p15
+ Associated variable : k1
+
+
+
+ Place : p16
+ Associated variable : yout
+
+
+  
+ Place : p17 
+ Associated variable : res
+ 
+
+
+ Place : p18 
+ Associated variable : y1
+ 
+
+
+ Place : p19 
+ Associated variable : y2
+
+
+
+ Place : p20 
+ Associated variable : y1
+
+
+
+ Place : p21
+ Associated variable : y2
+ 
+ 
+
+ Place : p22
+ Associated variable : y1
+
+
+  
+ Place : p23
+ Associated variable : y2
+ 
+
+
+ Place : p24 
+ Associated variable : y2
+ 
+
+
+ Place : p25
+ Associated variable : y2
+
+
+
+ Place : p26 
+ Associated variable : y1
+ 
+
+
+ Place : p27
+ Associated variable : y2
+  
+
+
+ Place : p28
+ Associated variable : res
+ 
+
+
+ Place : p29 
+ Associated variable : res
+ 
+
+
+ Place : p30 
+ Associated variable : res
+
+
+
+ Place : p31 
+ Associated variable : res
+
+
+ Number of Transitions = 27
+ Transition : t1
+ Transition function :res=1
+ Guard conditions :n_g
+ Printing Preset list(1) :p1 
+ Printing Postset list(2) :p5 p6  
+
+
+ Transition : t2
+ Transition function :y1=id
+ Guard conditions :n_g
+ Printing Preset list(1) :p2 
+ Printing Postset list(3) :p7 p8 p9 
+
+
+ Transition : t3
+ Transition function :y2=id
+ Guard conditions :n_g
+ Printing Preset list(1) :p3 
+ Printing Postset list(3) :p10 p11 p12 
+
+
+ Transition : t4
+ Transition function :i=0
+ Guard conditions :n_g
+ Printing Preset list(1) :p4 
+ Printing Postset list(1) :p13 
+
+
+ Transition : t5
+ Transition function :k=y1%2
+ Guard conditions :n_g
+ Printing Preset list(1) :p9
+ Printing Postset list(1) :p14 
+
+
+ Transition : t6
+ Transition function :k1=y2%2
+ Guard conditions :n_g
+ Printing Preset list(1) :p10
+ Printing Postset list(1) :p15
+
+ Transition : t7
+ Transition function :yout=y1*res
+ Guard conditions :y1==y2
+ Printing Preset list(5) :p5 p8 p14 p15 p11
+ Printing Postset list(1) :p16
+
+
+ Transition : t8
+ Transition function :res=res*2
+ Guard conditions :y1!=y2&&k1==0&&k==0
+ Printing Preset list(5) :p5 p8 p14 p15 p11 
+ Printing Postset list(3) :p5 p6 p17 
+
+
+ Transition : t9
+ Transition function :y1=y1*2
+ Guard conditions :n_g
+ Printing Preset list(5) :p8 p14 p15 p11 p5  
+ Printing Postset list(4) :p7 p8 p9 p18
+
+
+ Transition : t10
+ Transition function :y2=y2*2
+ Guard conditions :n_g
+ Printing Preset list(5) :p8 p14 p15 p11 p5
+ Printing Postset list(4) :p10 p11 p12 p19
+
+
+ Transition : t11
+ Transition function :y1=y1-y2
+ Guard conditions :n_g
+ Printing Preset list(5) :p8 p14 p15 p11 p5
+ Printing Postset list(4) :p7 p8 p9 p20 
+
+
+ Transition : t12
+ Transition function :y2=y2-y1
+ Guard conditions :n_g
+ Printing Preset list(5) :p8 p14 p15 p11 p5
+ Printing Postset list(4) :p10 p11 p12 p21
+
+ Transition : t13
+ Transition function :y1=1
+ Guard conditions :n_g
+ Printing Preset list(2) :p17 p7 
+ Printing Postset list(4) :p7 p8 p9 p22
+
+
+ Transition : t14
+ Transition function :y1=1
+ Guard conditions :n_g
+ Printing Preset list(2) :p18 p12  
+ Printing Postset list(4) :p10 p11 p12 p23 
+
+
+ Transition : t15
+ Transition function :y1=1
+ Guard conditions :n_g
+ Printing Preset list(2) :p19 p12 
+ Printing Postset list(4) :p10 p11 p12 p24 
+ 
+ Transition : t16
+ Transition function :y=1
+ Guard conditions :n_g
+ Printing Preset list(2) :p20 p12
+ Printing Postset list(4) :p10 p11 p12 p25
+
+ Transition : t17
+ Transition function :y1=1
+ Guard conditions :n_g
+ Printing Preset list(2) :p21 p7 
+ Printing Postset list(4) :p7 p8 p9 p26
+
+
+ Transition : t18
+ Transition function :y1=1
+ Guard conditions :n_g
+ Printing Preset list(2) :p22 p12 
+ Printing Postset list(4) :p10 p11 p12 p27 
+
+
+ Transition : t19
+ Transition function :y1=1
+ Guard conditions :n_g
+ Printing Preset list(2) :p23 p6 
+ Printing Postset list(3) :p5 p6 p28 
+
+ Transition : t20
+ Transition function :y1=1
+ Guard conditions :n_g
+ Printing Preset list(2) :p24 p6 
+ Printing Postset list(3) :p5 p6 p29
+
+
+ Transition : t21
+ Transition function :y1=1
+ Guard conditions :n_g
+ Printing Preset list(2) :p25 p6 
+ Printing Postset list(3) :p5 p6 p30
+
+
+ Transition : t22
+ Transition function :y1=1
+ Guard conditions :n_g
+ Printing Preset list(2) :p26 p6 
+ Printing Postset list(3) :p5 p6 p31 
+
+
+ Transition : t23
+ Transition function :y1=1
+ Guard conditions :n_g
+ Printing Preset list(2) :p27 p13
+ Printing Postset list(1) :p13 
+
+ Transition : t24
+ Transition function :y1=1
+ Guard conditions :n_g
+ Printing Preset list(2) :p28 p13
+ Printing Postset list(1) :p13
+
+ Transition : t25
+ Transition function :y1=1
+ Guard conditions :n_g
+ Printing Preset list(2) :p29 p13 
+ Printing Postset list(1) :p13 
+
+
+ Transition : t26
+ Transition function :y1=1
+ Guard conditions :n_g
+ Printing Preset list(2) :p30 p13
+ Printing Postset list(1) :p13 
+
+ Transition : t27
+ Transition function :y1=1
+ Guard conditions :n_g
+ Printing Preset list(2) :p31 p13
+ Printing Postset list(1) :p13
+ 
+ Printing initial marking ... 
+ Total number of initially marked places : 4
+ Initially marked places are : p1 p2 p3 p4 
+

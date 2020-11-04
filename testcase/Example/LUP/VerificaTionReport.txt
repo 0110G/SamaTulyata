@@ -1,0 +1,35 @@
+
+
+
+findcutpoints() is bigen ...............
+
+The cutpoint list is:-
+p1(type=1)	p2(type=0)	p3(type=1)	p4(type=1)	p5(type=1)	p6(type=1)	p7(type=1)	p8(type=1)	
+
+
+findcutpoints() is bigen ...............
+
+The cutpoint list is:-
+p1(type=1)	p2(type=0)	p3(type=1)	p4(type=1)	p5(type=1)	p6(type=1)	
+
+
+##################### PATH  EQUIVALANCE #######################
+
+
+
+<<<<<<<<<<<<<<<<< THE TWO MODEL ARE EQUIVALENT >>>>>>>>>>>>>>>>>
+
+
+
+
+
+###################### Verification Report ##############################
+
+
+ No. of places in N0: 8 and No. of places in N1: 6
+
+ No. of paths in initial path cover of M0: 0 and No. of paths in actual path cover of M0: 0
+
+ Exec time is 0 sec and 1059 microsecs
+
+##########################################################################

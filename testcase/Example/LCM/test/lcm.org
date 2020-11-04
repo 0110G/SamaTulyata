@@ -1,0 +1,64 @@
+
+ Number of Places = 5
+ Place : p1 
+ Associated variable : a
+
+
+ Place : p2 
+ Associated variable : b
+
+
+ Place : p3 
+ Associated variable : c
+
+
+ Place : p4
+ Associated variable : k
+ 
+ Place : p5
+ Associated variable : d
+ 
+ 
+
+
+ Number of Transitions = 5
+ Transition : t1
+ Transition function : a=b
+ Guard conditions :n>9
+ Printing Preset list(1) :p1 
+ Printing Postset list(1) : p2
+ 
+ 
+ 
+ Transition : t2
+ Transition function :n=id
+ Guard conditions :n<=9
+ Printing Preset list(1) :p2 
+ Printing Postset list(1) : p3
+ 
+ 
+ Transition : t3
+ Transition function :k=0
+ Guard conditions :n_g
+ Printing Preset list(1) :p2 
+ Printing Postset list(1) : p4
+ 
+ 
+ Transition : t4
+ Transition function :k=id
+ Guard conditions :n_g
+ Printing Preset list(1) :p3 
+ Printing Postset list(1) : p5
+ 
+ 
+ Transition : t5
+ Transition function :k=id
+ Guard conditions :n_g
+ Printing Preset list(1) :p5
+ Printing Postset list(1) : p2
+
+
+ Printing initial marking ... 
+ Total number of initially marked places : 1
+ Initially marked places are : p1 
+

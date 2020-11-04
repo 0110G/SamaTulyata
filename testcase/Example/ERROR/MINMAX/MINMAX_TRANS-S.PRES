@@ -1,0 +1,22 @@
+
+ Number of Places = 2
+ Place : p1 
+ Associated variable : a
+
+
+ Place : p2 
+ Associated variable : b
+
+
+ Number of Transitions = 1
+ Transition : t1
+ Transition function :b=a
+ Guard conditions :n_g
+ Printing Preset list(1) :p1 
+ Printing Postset list(1) : p2 
+
+
+ Printing initial marking ... 
+ Total number of initially marked places : 1
+ Initially marked places are : p1
+
